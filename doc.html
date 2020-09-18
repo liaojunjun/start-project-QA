@@ -1,0 +1,624 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create for ggdoc , @author sunyi</title>
+    <style>
+        .octicon{display:inline-block;fill:currentColor;vertical-align:text-bottom}
+        .anchor{float:left;line-height:1;margin-left:-20px;padding-right:4px}
+        .anchor:focus{outline:0}
+        h1 .octicon-link,h2 .octicon-link,h3 .octicon-link,h4 .octicon-link,h5 .octicon-link,h6 .octicon-link{color:#1b1f23;vertical-align:middle;visibility:hidden}
+        h1:hover .anchor,h2:hover .anchor,h3:hover .anchor,h4:hover .anchor,h5:hover .anchor,h6:hover .anchor{text-decoration:none}
+        h1:hover .anchor .octicon-link,h2:hover .anchor .octicon-link,h3:hover .anchor .octicon-link,h4:hover .anchor .octicon-link,h5:hover .anchor .octicon-link,h6:hover .anchor .octicon-link{visibility:visible}
+        h1:hover .anchor .octicon-link:before,h2:hover .anchor .octicon-link:before,h3:hover .anchor .octicon-link:before,h4:hover .anchor .octicon-link:before,h5:hover .anchor .octicon-link:before,h6:hover .anchor .octicon-link:before{width:16px;height:16px;content:" ";display:inline-block;background-image:url("data:image/svg+xml,%3Csvgxmlns='http://www.w3.org/2000/svg'viewBox='001616'version='1.1'width='16'height='16'aria-hidden='true'%3E%3Cpathfill-rule='evenodd'd='M49h1v1H4c-1.50-3-1.69-3-3.5S2.55343h4c1.45031.6933.501.41-.912.72-23.25V8.59c.58-.451-1.271-2.09C105.228.98484H4c-.980-21.22-22.5S3949zm9-3h-1v1h1c1021.2222.5S13.98121312H9c-.980-2-1.22-2-2.50-.83.42-1.641-2.09V6.25c-1.09.53-21.84-23.25C611.317.5513913h4c1.4503-1.693-3.5S14.56136z'%3E%3C/path%3E%3C/svg%3E")}
+        body{-webkit-text-size-adjust:100%;line-height:1.5;color:#24292e;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;font-size:16px;line-height:1.5;word-wrap:break-word;background-color:#e3e3ef;height:100%;width:100%;margin:0;padding:20px}
+        details{display:block}
+        summary{display:list-item}
+        a{background-color:initial}
+        a:active,a:hover{outline-width:0}
+        strong{font-weight:inherit;font-weight:bolder}
+        h1{font-size:2em;margin:.67em 0}
+        img{border-style:none}
+        code,kbd,pre{font-family:monospace,monospace;font-size:1em}
+        hr{box-sizing:initial;height:0;overflow:visible}
+        input{font:inherit;margin:0}
+        input{overflow:visible}
+        [type="checkbox"]{box-sizing:border-box;padding:0}
+        *{box-sizing:border-box}
+        input{font-family:inherit;font-size:inherit;line-height:inherit}
+        a{color:#0366d6;text-decoration:none}
+        a:hover{text-decoration:underline}
+        strong{font-weight:600}
+        hr{height:0;margin:15px 0;overflow:hidden;background:transparent;border:0;border-bottom:1px solid #dfe2e5}
+        hr:after,hr:before{display:table;content:""}
+        hr:after{clear:both}
+        table{border-spacing:0;border-collapse:collapse}
+        td,th{padding:0}
+        details summary{cursor:pointer}
+        kbd{display:inline-block;padding:3px 5px;font:11px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;line-height:10px;color:#444d56;vertical-align:middle;background-color:#fafbfc;border:1px solid #d1d5da;border-radius:3px;box-shadow:inset 0 -1px 0 #d1d5da}
+        h1,h2,h3,h4,h5,h6{margin-top:0;margin-bottom:0}
+        h1{font-size:32px}
+        h1,h2{font-weight:600}
+        h2{font-size:24px}
+        h3{font-size:20px}
+        h3,h4{font-weight:600}
+        h4{font-size:16px}
+        h5{font-size:14px}
+        h5,h6{font-weight:600}
+        h6{font-size:12px}
+        p{margin-top:0;margin-bottom:10px}
+        blockquote{margin:0}
+        ol,ul{padding-left:0;margin-top:0;margin-bottom:0}
+        ol ol,ul ol{list-style-type:lower-roman}
+        ol ol ol,ol ul ol,ul ol ol,ul ul ol{list-style-type:lower-alpha}
+        dd{margin-left:0}
+        code,pre{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:12px}
+        pre{margin-top:0;margin-bottom:0}
+        input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{margin:0;-webkit-appearance:none;appearance:none}
+        :checked+.radio-label{position:relative;z-index:1;border-color:#0366d6}
+        .border{border:1px solid #e1e4e8!important}
+        .border-0{border:0!important}
+        .border-bottom{border-bottom:1px solid #e1e4e8!important}
+        .rounded-1{border-radius:3px!important}
+        .bg-white{background-color:#fff!important}
+        .bg-gray-light{background-color:#fafbfc!important}
+        .text-gray-light{color:#6a737d!important}
+        .mb-0{margin-bottom:0!important}
+        .my-2{margin-top:8px!important;margin-bottom:8px!important}
+        .pl-0{padding-left:0!important}
+        .py-0{padding-top:0!important;padding-bottom:0!important}
+        .pl-1{padding-left:4px!important}
+        .pl-2{padding-left:8px!important}
+        .py-2{padding-top:8px!important;padding-bottom:8px!important}
+        .pl-3,.px-3{padding-left:16px!important}
+        .px-3{padding-right:16px!important}
+        .pl-4{padding-left:24px!important}
+        .pl-5{padding-left:32px!important}
+        .pl-6{padding-left:40px!important}
+        .f6{font-size:12px!important}
+        .lh-condensed{line-height:1.25!important}
+        .text-bold{font-weight:600!important}
+        .pl-c{color:#6a737d}
+        .pl-c1,.pl-s .pl-v{color:#005cc5}
+        .pl-e,.pl-en{color:#6f42c1}
+        .pl-s .pl-s1,.pl-smi{color:#24292e}
+        .pl-ent{color:#22863a}
+        .pl-k{color:#d73a49}
+        .pl-pds,.pl-s,.pl-s .pl-pse .pl-s1,.pl-sr,.pl-sr .pl-cce,.pl-sr .pl-sra,.pl-sr .pl-sre{color:#032f62}
+        .pl-smw,.pl-v{color:#e36209}
+        .pl-bu{color:#b31d28}
+        .pl-ii{color:#fafbfc;background-color:#b31d28}
+        .pl-c2{color:#fafbfc;background-color:#d73a49}
+        .pl-c2:before{content:"^M"}
+        .pl-sr .pl-cce{font-weight:700;color:#22863a}
+        .pl-ml{color:#735c0f}
+        .pl-mh,.pl-mh .pl-en,.pl-ms{font-weight:700;color:#005cc5}
+        .pl-mi{font-style:italic;color:#24292e}
+        .pl-mb{font-weight:700;color:#24292e}
+        .pl-md{color:#b31d28;background-color:#ffeef0}
+        .pl-mi1{color:#22863a;background-color:#f0fff4}
+        .pl-mc{color:#e36209;background-color:#ffebda}
+        .pl-mi2{color:#f6f8fa;background-color:#005cc5}
+        .pl-mdr{font-weight:700;color:#6f42c1}
+        .pl-ba{color:#586069}
+        .pl-sg{color:#959da5}
+        .pl-corl{text-decoration:underline;color:#032f62}
+        .mb-0{margin-bottom:0!important}
+        .my-2{margin-bottom:8px!important}
+        .my-2{margin-top:8px!important}
+        .pl-0{padding-left:0!important}
+        .py-0{padding-top:0!important;padding-bottom:0!important}
+        .pl-1{padding-left:4px!important}
+        .pl-2{padding-left:8px!important}
+        .py-2{padding-top:8px!important;padding-bottom:8px!important}
+        .pl-3{padding-left:16px!important}
+        .pl-4{padding-left:24px!important}
+        .pl-5{padding-left:32px!important}
+        .pl-6{padding-left:40px!important}
+        .pl-7{padding-left:48px!important}
+        .pl-8{padding-left:64px!important}
+        .pl-9{padding-left:80px!important}
+        .pl-10{padding-left:96px!important}
+        .pl-11{padding-left:112px!important}
+        .pl-12{padding-left:128px!important}
+        hr{border-bottom-color:#eee}
+        kbd{display:inline-block;padding:3px 5px;font:11px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;line-height:10px;color:#444d56;vertical-align:middle;background-color:#fafbfc;border:1px solid #d1d5da;border-radius:3px;box-shadow:inset 0 -1px 0 #d1d5da}
+        .markdown-body:after,.markdown-body:before{display:table;content:""}
+        .markdown-body:after{clear:both}
+        .markdown-body>:first-child{margin-top:0!important}
+        .markdown-body>:last-child{margin-bottom:0!important}
+        a:not([href]){color:inherit;text-decoration:none}
+        blockquote,details,dl,ol,p,pre,table,ul{margin-top:0;margin-bottom:16px}
+        hr{height:.25em;padding:0;margin:24px 0;background-color:#e1e4e8;border:0}
+        blockquote{padding:0 1em;color:#6a737d;border-left:.25em solid #dfe2e5}
+        blockquote>:first-child{margin-top:0}
+        blockquote>:last-child{margin-bottom:0}
+        h1,h2,h3,h4,h5,h6{margin-top:24px;margin-bottom:16px;font-weight:600;line-height:1.25}
+        h1{font-size:2em}
+        h1,h2{padding-bottom:.3em;border-bottom:1px solid #eaecef}
+        h2{font-size:1.5em}
+        h3{font-size:1.25em}
+        h4{font-size:1em}
+        h5{font-size:.875em}
+        h6{font-size:.85em;color:#6a737d}
+        ol,ul{padding-left:2em}
+        ol ol,ol ul,ul ol,ul ul{margin-top:0;margin-bottom:0}
+        li{word-wrap:break-all}
+        li>p{margin-top:16px}
+        li+li{margin-top:.25em}
+        dl{padding:0}
+        dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:600}
+        dl dd{padding:0 16px;margin-bottom:16px}
+        table{display:block;width:100%;overflow:auto}
+        table th{font-weight:600}
+        table td,table th{padding:6px 13px;border:1px solid #dfe2e5}
+        table tr{background-color:#fff;border-top:1px solid #c6cbd1}
+        table tr:nth-child(2n){background-color:#f6f8fa}
+        img{max-width:100%;box-sizing:initial;background-color:#fff}
+        img[align="right"]{padding-left:20px}
+        img[align="left"]{padding-right:20px}
+        code{padding:.2em .4em;margin:0;font-size:85%;background-color:rgba(27,31,35,0.05);border-radius:3px}
+        pre{word-wrap:normal}
+        pre>code{padding:0;margin:0;font-size:100%;word-break:normal;white-space:pre;background:transparent;border:0}
+        .highlight{margin-bottom:16px}
+        .highlight pre{margin-bottom:0;word-break:normal}
+        .highlight pre,pre{padding:16px;overflow:auto;font-size:85%;line-height:1.45;background-color:#f6f8fa;border-radius:3px}
+        pre code{display:inline;max-width:auto;padding:0;margin:0;overflow:visible;line-height:inherit;word-wrap:normal;background-color:initial;border:0}
+        .commit-tease-sha{display:inline-block;font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:90%;color:#444d56}
+        .full-commit .btn-outline:not(:disabled):hover{color:#005cc5;border-color:#005cc5}
+        .blob-wrapper{overflow-x:auto;overflow-y:hidden}
+        .blob-wrapper-embedded{max-height:240px;overflow-y:auto}
+        .blob-num{width:1%;min-width:50px;padding-right:10px;padding-left:10px;font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:12px;line-height:20px;color:rgba(27,31,35,0.3);text-align:right;white-space:nowrap;vertical-align:top;cursor:pointer;user-select:none}
+        .blob-num:hover{color:rgba(27,31,35,0.6)}
+        .blob-num:before{content:attr(data-line-number)}
+        .blob-code{position:relative;padding-right:10px;padding-left:10px;line-height:20px;vertical-align:top}
+        .blob-code-inner{overflow:visible;font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:12px;color:#24292e;word-wrap:normal;white-space:pre}
+        .pl-token.active,.pl-token:hover{cursor:pointer;background:#ffea7f}
+        .tab-size[data-tab-size="1"]{-moz-tab-size:1;tab-size:1}
+        .tab-size[data-tab-size="2"]{-moz-tab-size:2;tab-size:2}
+        .tab-size[data-tab-size="3"]{-moz-tab-size:3;tab-size:3}
+        .tab-size[data-tab-size="4"]{-moz-tab-size:4;tab-size:4}
+        .tab-size[data-tab-size="5"]{-moz-tab-size:5;tab-size:5}
+        .tab-size[data-tab-size="6"]{-moz-tab-size:6;tab-size:6}
+        .tab-size[data-tab-size="7"]{-moz-tab-size:7;tab-size:7}
+        .tab-size[data-tab-size="8"]{-moz-tab-size:8;tab-size:8}
+        .tab-size[data-tab-size="9"]{-moz-tab-size:9;tab-size:9}
+        .tab-size[data-tab-size="10"]{-moz-tab-size:10;tab-size:10}
+        .tab-size[data-tab-size="11"]{-moz-tab-size:11;tab-size:11}
+        .tab-size[data-tab-size="12"]{-moz-tab-size:12;tab-size:12}
+        .task-list-item{list-style-type:none}
+        .task-list-item+.task-list-item{margin-top:3px}
+        .task-list-item input{margin:0 .2em .25em -1.6em;vertical-align:middle}
+        #page{width:calc(100% - 300px);margin-left:300px}
+        fieldset{display:none;background-color:#fff;border:0;overflow:hidden;box-shadow:2px 2px 10px rgba(128,128,128,0.2);margin-bottom:20px;padding:20px}
+        fieldset legend{font-weight:bold;color:green;height:3.5em;margin-left:-20px;padding:0}
+        #nav{background:rgb(255 255 255 / .6);padding:40px;position:fixed;top:0;left:0;bottom:0;width:300px;overflow-y:auto}
+        ::-webkit-scrollbar{width:5px}
+        ::-webkit-scrollbar-thumb{background-color:#79a5e8}
+        @media print,(max-width:900px){
+          #nav{display:none!important}
+          #page{width:100%!important;margin-left:0!important}
+          fieldset{display:block!important;box-shadow:none!important}
+          .toggle-hash-btn {display: none !important;}
+        }
+        .hljs{display:block;overflow-x:auto;padding:.5em;color:#333;background:#f8f8f8}
+        .hljs-comment,.hljs-quote{color:#998;font-style:italic}
+        .hljs-keyword,.hljs-selector-tag,.hljs-subst{color:#333;font-weight:bold}
+        .hljs-number,.hljs-literal,.hljs-variable,.hljs-template-variable,.hljs-tag .hljs-attr{color:#008080}
+        .hljs-string,.hljs-doctag{color:#d14}
+        .hljs-title,.hljs-section,.hljs-selector-id{color:#900;font-weight:bold}
+        .hljs-subst{font-weight:normal}
+        .hljs-type,.hljs-class .hljs-title{color:#458;font-weight:bold}
+        .hljs-tag,.hljs-name,.hljs-attribute{color:#000080;font-weight:normal}
+        .hljs-regexp,.hljs-link{color:#009926}
+        .hljs-symbol,.hljs-bullet{color:#990073}
+        .hljs-built_in,.hljs-builtin-name{color:#0086b3}
+        .hljs-meta{color:#999;font-weight:bold}
+        .hljs-deletion{background:#fdd}
+        .hljs-addition{background:#dfd}
+        .hljs-emphasis{font-style:italic}
+        .hljs-strong{font-weight:bold}
+        .toggle-hash-btn {position: fixed;bottom: 10px;left:10px;z-index: 1000; display: flex; justify-content: space-between;  width: 270px;}
+    </style>
+    <script>
+          const $ = selector => document.querySelector(selector);
+          const $$ = selector => document.querySelectorAll(selector);
+          const decode = s => decodeURIComponent(s);
+          const domInfo = dom => ({
+            offsetParent: dom.offsetParent.className,
+            offsetLeft: dom.offsetLeft,
+            offsetTop: dom.offsetTop,
+            clientWidth: dom.clientWidth,
+            offsetWidth: dom.offsetWidth,
+            BoundingClientRect: dom.getBoundingClientRect(),
+          });
+          let openHash = false;
+          function viewFieldset() {
+            const hash = decode(location.hash);
+            if(openHash && hash &&$(`fieldset${hash}`)) {
+              Array.from($$('fieldset')).forEach(dom  =>dom.style.display = 'none');
+              $(`fieldset${hash}`).style.display = 'block';
+            }else {
+              Array.from($$('fieldset')).forEach(dom  =>dom.style.display = 'block');
+            }
+          }
+          window.onhashchange = viewFieldset;
+          window.onload  = ()=>{
+            viewFieldset();
+            setATarget();
+          };
+          
+          function toggleHash() {
+            openHash = !openHash;
+            viewFieldset();
+            $('.toggle-hash-btn button').innerText = openHash ? '关闭专注模式' : '开启专注模式';
+          }
+          function setATarget() {
+            $$('#page a').forEach(a=>a.target = '_blank');
+          }
+    </script>
+</head>
+
+<body>
+  <div class="toggle-hash-btn">
+    <button  onclick="toggleHash()">开启专注模式</button>
+     <a target='_blank' href="https://github.com/liaojunjun/ggdoc"><svg class="octicon octicon-mark-github v-align-middle" height="25" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg></a>
+  </div><div id="page">
+      <fieldset id='_WTNUPZ'>
+      <legend>layout</legend>
+      <p>布局方案:</p>
+<p><input type="radio" name="layout"> 固定像素静态布局
+<input type="radio" name="layout"> 百分比宽度网格布局
+<input type="radio" name="layout"> flex响应式布局</p>
+
+      </fieldset>
+      
+      <fieldset id='_UKYtoT'>
+      <legend>model</legend>
+      <p>终端适配：</p>
+<p><input type="checkbox"> 手机
+<input type="checkbox"> 平板
+<input type="checkbox"> 中型屏幕
+<input type="checkbox"> 大型屏幕
+<input type="checkbox"> 超大屏幕</p>
+
+      </fieldset>
+      
+      <fieldset id='_MtnORR'>
+      <legend>design</legend>
+      <p>设计风格：</p>
+<p><input type="radio" name="design"> Material Design
+<input type="radio" name="design"> Ant Design
+<input type="radio" name="design"> prime Design
+<input type="radio" name="design"> bootstrap</p>
+
+      </fieldset>
+      
+      <fieldset id='_9LMmRf'>
+      <legend>globalization</legend>
+      <p>是否支持国际化：</p>
+<p><input type="radio" name="globalization"> 是
+<input type="radio" name="globalization"> 否</p>
+
+      </fieldset>
+      
+      <fieldset id='_Ug3d6z'>
+      <legend>scope</legend>
+      <p>页面权限范围：</p>
+<p><input type="checkbox"> 页面
+<input type="checkbox"> 页面中板块
+<input type="checkbox"> 按钮</p>
+
+      </fieldset>
+      
+      <fieldset id='_jwncmB'>
+      <legend>module</legend>
+      
+      </fieldset>
+      
+      <fieldset id='_CdLuuK'>
+      <legend>modules</legend>
+      <ul>
+<li>shareModule 共享模块</li>
+<li>layoutModule 主容器模块</li>
+</ul>
+
+      </fieldset>
+      
+      <fieldset id='_eLbBPw'>
+      <legend>component</legend>
+      <h4 id="组件类型">组件类型</h4>
+<ol>
+<li>容器组件 含有<code>&lt;ng-content&gt;&lt;/ng-content&gt;</code></li>
+<li>输入型组件 含有<code>@Input()</code></li>
+<li>输出型组件 含有<code>@Output()</code></li>
+<li>输入输出型组件 同时含有<code>@Input() @Output()</code></li>
+<li>自闭型组件 设置为<code>changeDetection: ChangeDetectionStrategy.OnPush</code>,只能通过 Input 通知它,可触发父组件 check 钩子</li>
+<li>父组件 有子组件的组件</li>
+<li>普通组件 无以上特征</li>
+</ol>
+<h4 id="本项目需自己开发的组件">本项目需自己开发的组件</h4>
+
+      </fieldset>
+      
+      <fieldset id='_EObU0r'>
+      <legend>class</legend>
+      
+      </fieldset>
+      
+      <fieldset id='_TkMt4g'>
+      <legend>directive</legend>
+      <ul>
+<li>权限指令</li>
+<li>input限制输入指令</li>
+</ul>
+
+      </fieldset>
+      
+      <fieldset id='_KMfnn6'>
+      <legend>enum</legend>
+      
+      </fieldset>
+      
+      <fieldset id='_rnuPiK'>
+      <legend>guard</legend>
+      
+      </fieldset>
+      
+      <fieldset id='_FcMFO4'>
+      <legend>interceptor</legend>
+      
+      </fieldset>
+      
+      <fieldset id='_Rx2Dsp'>
+      <legend>interface</legend>
+      
+      </fieldset>
+      
+      <fieldset id='_daYvKM'>
+      <legend>pipe</legend>
+      <h4 id="全局管道">全局管道</h4>
+<ol>
+<li>get.pipe.ts</li>
+</ol>
+<pre><code class="language-ts"><span class="hljs-keyword">import</span> { Pipe, PipeTransform } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;@angular/core&quot;</span>;
+<span class="hljs-keyword">import</span> { get } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;lodash&quot;</span>;
+
+<span class="hljs-comment">// @example</span>
+<span class="hljs-comment">// &lt;h4&gt;{{ data | get:&#x27;a.b&#x27; }}&lt;/h4&gt;</span>
+
+<span class="hljs-meta">@Pipe</span>({
+  name: <span class="hljs-string">&quot;get&quot;</span>
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> GetPipe <span class="hljs-keyword">implements</span> PipeTransform {
+  transform(obj: <span class="hljs-built_in">object</span>, path: <span class="hljs-built_in">string</span>, <span class="hljs-keyword">default</span>?): <span class="hljs-built_in">any</span> {
+    <span class="hljs-keyword">return</span> get(obj, path, <span class="hljs-keyword">default</span>);
+  }
+}
+</code></pre>
+<ol start="2">
+<li>json2obj.pipe.ts</li>
+</ol>
+<pre><code class="language-ts"><span class="hljs-keyword">import</span> { Pipe, PipeTransform } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;@angular/core&quot;</span>;
+
+<span class="hljs-comment">// @example</span>
+<span class="hljs-comment">// &lt;ng-template [ngIf]=&quot;str | json2obj&quot; let-value=&quot;ngIf&quot;&gt;</span>
+<span class="hljs-comment">//     &lt;h4&gt;{{ value | json }}&lt;/h4&gt;</span>
+<span class="hljs-comment">//     &lt;h4&gt;{{ value | get:&#x27;a&#x27; }}&lt;/h4&gt;</span>
+<span class="hljs-comment">// &lt;/ng-template&gt;</span>
+<span class="hljs-comment">// &lt;ng-template [ngIf]=&quot; null | json2obj&quot; let-value=&quot;ngIf&quot;&gt;</span>
+<span class="hljs-comment">//     我不会显示出来的</span>
+<span class="hljs-comment">// &lt;/ng-template&gt;</span>
+
+<span class="hljs-meta">@Pipe</span>({
+  name: <span class="hljs-string">&quot;json2obj&quot;</span>,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> Json2objPipe <span class="hljs-keyword">implements</span> PipeTransform {
+  transform(str: <span class="hljs-built_in">any</span>): <span class="hljs-built_in">object</span> {
+    <span class="hljs-keyword">try</span> {
+      <span class="hljs-keyword">return</span> <span class="hljs-built_in">JSON</span>.parse(str);
+    } <span class="hljs-keyword">catch</span> (e) {
+      <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
+    }
+  }
+}</code></pre>
+<ol start="3">
+<li>safe-html.pipe.ts</li>
+</ol>
+<pre><code class="language-ts"><span class="hljs-keyword">import</span> { Pipe, PipeTransform } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> { DomSanitizer } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/platform-browser&#x27;</span>;
+
+<span class="hljs-meta">@Pipe</span>({
+  name: <span class="hljs-string">&#x27;safeHtml&#x27;</span>,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> SafeHtmlPipe <span class="hljs-keyword">implements</span> PipeTransform {
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> sanitized: DomSanitizer</span>) {}
+  transform(value: <span class="hljs-built_in">string</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.sanitized.bypassSecurityTrustHtml(value);
+  }
+}
+</code></pre>
+
+      </fieldset>
+      
+      <fieldset id='_r6F3PE'>
+      <legend>service</legend>
+      <ul>
+<li>全局服务</li>
+</ul>
+<ul>
+<li>模块层服务</li>
+</ul>
+<ul>
+<li>组件层服务</li>
+</ul>
+
+      </fieldset>
+      
+      <fieldset id='_UYOUqg'>
+      <legend>naming-rules</legend>
+      <style>
+    table {
+        border-collapse:collapse;
+        margin-left:40px;
+    }
+    tr {
+        border:1px solid #ccc;
+    }
+    td,th {
+        padding:5px 10px;
+    }
+</style>
+
+<h4 id="命名规划">命名规划</h4>
+<ul>
+<li>函数(动词+名词)</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>动词</th>
+<th>含义</th>
+<th>返回值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>can</td>
+<td>是否可执行某个动作</td>
+<td>boolean</td>
+</tr>
+<tr>
+<td>has</td>
+<td>含有某个值，该值使原始类型</td>
+<td>boolean</td>
+</tr>
+<tr>
+<td>is</td>
+<td>判断值为某类型</td>
+<td>boolean</td>
+</tr>
+<tr>
+<td>get</td>
+<td>获取某个值，该值为原始类型</td>
+<td>value</td>
+</tr>
+<tr>
+<td>set</td>
+<td>设置某个值，该值为原始类型</td>
+<td>void</td>
+</tr>
+<tr>
+<td>load</td>
+<td>加载本地资源</td>
+<td>promise / Observable</td>
+</tr>
+<tr>
+<td>fetch</td>
+<td>获取服务器中数据</td>
+<td>promise / Observable</td>
+</tr>
+<tr>
+<td>hand</td>
+<td>中转一个动作</td>
+<td>any</td>
+</tr>
+<tr>
+<td>create</td>
+<td>增加 this 中数据</td>
+<td>void</td>
+</tr>
+<tr>
+<td>delete</td>
+<td>删除 this 中数据</td>
+<td>void</td>
+</tr>
+<tr>
+<td>update</td>
+<td>修改 this 中数据</td>
+<td>void</td>
+</tr>
+<tr>
+<td>read</td>
+<td>读取 this 中数据</td>
+<td>void</td>
+</tr>
+<tr>
+<td>backTo</td>
+<td>返回到某个状态</td>
+<td>void</td>
+</tr>
+<tr>
+<td>on</td>
+<td>绑定 DOM 原生事件</td>
+<td>void</td>
+</tr>
+</tbody></table>
+<ul>
+<li><p>常量 = const + 大写名词</p>
+</li>
+<li><p>变量 = let + 小写名词</p>
+</li>
+<li><p>纯净函数 = const + 小写动词/名词</p>
+</li>
+<li><p>类名 = class + 大写首字母的名词</p>
+</li>
+</ul>
+
+      </fieldset>
+      
+      <fieldset id='_c28mnf'>
+      <legend>backInterface</legend>
+      <p>当接口成功调用时返回：</p>
+<pre><code class="language-js">{
+    <span class="hljs-attr">status</span>:number;
+    data:any;
+}</code></pre>
+<p>当接口失败调用时返回：</p>
+<pre><code class="language-js">{
+    <span class="hljs-attr">status</span>:number;
+    errorMsg:string;
+}</code></pre>
+
+      </fieldset>
+      
+      <fieldset id='_X01KHa'>
+      <legend>unit</legend>
+      <p>一些单位约定</p>
+<table>
+<thead>
+<tr>
+<th>-</th>
+<th>单位</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>流量</td>
+<td></td>
+</tr>
+<tr>
+<td>金额</td>
+<td></td>
+</tr>
+<tr>
+<td>里程</td>
+<td></td>
+</tr>
+<tr>
+<td>时间</td>
+<td></td>
+</tr>
+</tbody></table>
+
+      </fieldset>
+      
+      <fieldset id='_nY6DaG'>
+      <legend>密码加密方式</legend>
+      <p>加密方式：</p>
+<p><input type="radio" name="encryption"> base64
+<input type="radio" name="encryption"> md5
+<input type="radio" name="encryption"> 其他</p>
+
+      </fieldset>
+      </div><div id="nav"><div style="margin-left:0em"><strong>设计</strong><br/></div><div style="margin-left:2em"><a href="#_WTNUPZ">layout</a><br/></div><div style="margin-left:2em"><a href="#_UKYtoT">model</a><br/></div><div style="margin-left:2em"><a href="#_MtnORR">design</a><br/></div><div style="margin-left:0em"><strong>配置</strong><br/></div><div style="margin-left:2em"><a href="#_9LMmRf">globalization</a><br/></div><div style="margin-left:2em"><a href="#_Ug3d6z">scope</a><br/></div><div style="margin-left:0em"><strong>业务</strong><br/></div><div style="margin-left:2em"><a href="#_jwncmB">module</a><br/></div><div style="margin-left:0em"><strong>开发</strong><br/></div><div style="margin-left:4em"><strong>FE</strong><br/></div><div style="margin-left:6em"><a href="#_CdLuuK">modules</a><br/></div><div style="margin-left:6em"><a href="#_eLbBPw">component</a><br/></div><div style="margin-left:6em"><a href="#_EObU0r">class</a><br/></div><div style="margin-left:6em"><a href="#_TkMt4g">directive</a><br/></div><div style="margin-left:6em"><a href="#_KMfnn6">enum</a><br/></div><div style="margin-left:6em"><a href="#_rnuPiK">guard</a><br/></div><div style="margin-left:6em"><a href="#_FcMFO4">interceptor</a><br/></div><div style="margin-left:6em"><a href="#_Rx2Dsp">interface</a><br/></div><div style="margin-left:6em"><a href="#_daYvKM">pipe</a><br/></div><div style="margin-left:6em"><a href="#_r6F3PE">service</a><br/></div><div style="margin-left:6em"><a href="#_UYOUqg">naming-rules</a><br/></div><div style="margin-left:4em"><strong>BE</strong><br/></div><div style="margin-left:6em"><a href="#_c28mnf">backInterface</a><br/></div><div style="margin-left:6em"><a href="#_X01KHa">unit</a><br/></div><div style="margin-left:6em"><a href="#_nY6DaG">密码加密方式</a><br/></div></div>
+</body></html>

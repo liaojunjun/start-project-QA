@@ -1,0 +1,106 @@
+<style>
+    table {
+        border-collapse:collapse;
+        margin-left:40px;
+    }
+    tr {
+        border:1px solid #ccc;
+    }
+    td,th {
+        padding:5px 10px;
+    }
+</style>
+
+<h4 id="命名规划">命名规划</h4>
+<ul>
+<li>函数(动词+名词)</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>动词</th>
+<th>含义</th>
+<th>返回值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>can</td>
+<td>是否可执行某个动作</td>
+<td>boolean</td>
+</tr>
+<tr>
+<td>has</td>
+<td>含有某个值，该值使原始类型</td>
+<td>boolean</td>
+</tr>
+<tr>
+<td>is</td>
+<td>判断值为某类型</td>
+<td>boolean</td>
+</tr>
+<tr>
+<td>get</td>
+<td>获取某个值，该值为原始类型</td>
+<td>value</td>
+</tr>
+<tr>
+<td>set</td>
+<td>设置某个值，该值为原始类型</td>
+<td>void</td>
+</tr>
+<tr>
+<td>load</td>
+<td>加载本地资源</td>
+<td>promise / Observable</td>
+</tr>
+<tr>
+<td>fetch</td>
+<td>获取服务器中数据</td>
+<td>promise / Observable</td>
+</tr>
+<tr>
+<td>hand</td>
+<td>中转一个动作</td>
+<td>any</td>
+</tr>
+<tr>
+<td>create</td>
+<td>增加 this 中数据</td>
+<td>void</td>
+</tr>
+<tr>
+<td>delete</td>
+<td>删除 this 中数据</td>
+<td>void</td>
+</tr>
+<tr>
+<td>update</td>
+<td>修改 this 中数据</td>
+<td>void</td>
+</tr>
+<tr>
+<td>read</td>
+<td>读取 this 中数据</td>
+<td>void</td>
+</tr>
+<tr>
+<td>backTo</td>
+<td>返回到某个状态</td>
+<td>void</td>
+</tr>
+<tr>
+<td>on</td>
+<td>绑定 DOM 原生事件</td>
+<td>void</td>
+</tr>
+</tbody></table>
+<ul>
+<li><p>常量 = const + 大写名词</p>
+</li>
+<li><p>变量 = let + 小写名词</p>
+</li>
+<li><p>纯净函数 = const + 小写动词/名词</p>
+</li>
+<li><p>类名 = class + 大写首字母的名词</p>
+</li>
+</ul>

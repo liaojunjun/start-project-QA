@@ -1,0 +1,61 @@
+<h4 id="全局管道">全局管道</h4>
+<ol>
+<li>get.pipe.ts</li>
+</ol>
+<pre><code class="language-ts"><span class="hljs-keyword">import</span> { Pipe, PipeTransform } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;@angular/core&quot;</span>;
+<span class="hljs-keyword">import</span> { get } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;lodash&quot;</span>;
+
+<span class="hljs-comment">// @example</span>
+<span class="hljs-comment">// &lt;h4&gt;{{ data | get:&#x27;a.b&#x27; }}&lt;/h4&gt;</span>
+
+<span class="hljs-meta">@Pipe</span>({
+  name: <span class="hljs-string">&quot;get&quot;</span>
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> GetPipe <span class="hljs-keyword">implements</span> PipeTransform {
+  transform(obj: <span class="hljs-built_in">object</span>, path: <span class="hljs-built_in">string</span>, <span class="hljs-keyword">default</span>?): <span class="hljs-built_in">any</span> {
+    <span class="hljs-keyword">return</span> get(obj, path, <span class="hljs-keyword">default</span>);
+  }
+}
+</code></pre>
+<ol start="2">
+<li>json2obj.pipe.ts</li>
+</ol>
+<pre><code class="language-ts"><span class="hljs-keyword">import</span> { Pipe, PipeTransform } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;@angular/core&quot;</span>;
+
+<span class="hljs-comment">// @example</span>
+<span class="hljs-comment">// &lt;ng-template [ngIf]=&quot;str | json2obj&quot; let-value=&quot;ngIf&quot;&gt;</span>
+<span class="hljs-comment">//     &lt;h4&gt;{{ value | json }}&lt;/h4&gt;</span>
+<span class="hljs-comment">//     &lt;h4&gt;{{ value | get:&#x27;a&#x27; }}&lt;/h4&gt;</span>
+<span class="hljs-comment">// &lt;/ng-template&gt;</span>
+<span class="hljs-comment">// &lt;ng-template [ngIf]=&quot; null | json2obj&quot; let-value=&quot;ngIf&quot;&gt;</span>
+<span class="hljs-comment">//     我不会显示出来的</span>
+<span class="hljs-comment">// &lt;/ng-template&gt;</span>
+
+<span class="hljs-meta">@Pipe</span>({
+  name: <span class="hljs-string">&quot;json2obj&quot;</span>,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> Json2objPipe <span class="hljs-keyword">implements</span> PipeTransform {
+  transform(str: <span class="hljs-built_in">any</span>): <span class="hljs-built_in">object</span> {
+    <span class="hljs-keyword">try</span> {
+      <span class="hljs-keyword">return</span> <span class="hljs-built_in">JSON</span>.parse(str);
+    } <span class="hljs-keyword">catch</span> (e) {
+      <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
+    }
+  }
+}</code></pre>
+<ol start="3">
+<li>safe-html.pipe.ts</li>
+</ol>
+<pre><code class="language-ts"><span class="hljs-keyword">import</span> { Pipe, PipeTransform } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> { DomSanitizer } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/platform-browser&#x27;</span>;
+
+<span class="hljs-meta">@Pipe</span>({
+  name: <span class="hljs-string">&#x27;safeHtml&#x27;</span>,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> SafeHtmlPipe <span class="hljs-keyword">implements</span> PipeTransform {
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> sanitized: DomSanitizer</span>) {}
+  transform(value: <span class="hljs-built_in">string</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.sanitized.bypassSecurityTrustHtml(value);
+  }
+}
+</code></pre>
